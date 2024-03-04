@@ -5,7 +5,7 @@
     let { supabase } = data
     $: ({ supabase } = data)
 
-    let photo_url = 'https://images2.imgbox.com/5f/1f/VN22yobl_o.png';
+    let photo_url = 'https://i.pravatar.cc/150?img=12';
     let name = 'Cristian Cabrera';
     let job = 'Fullstack Developer';
     let department = 'Engineering';
