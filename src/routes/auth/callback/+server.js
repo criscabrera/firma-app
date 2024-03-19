@@ -1,4 +1,4 @@
-import { redirect } from '@sveltejs/kit';
+import { error, redirect } from '@sveltejs/kit';
 
 export const GET = async (event) => {
 	const {
@@ -11,10 +11,11 @@ export const GET = async (event) => {
   if (code) {
     const { error } = await supabase.auth.exchangeCodeForSession(code)
     if (!error) {
-      throw redirect(303, `/${next.slice(1)}`);
+      redirect(303, `/${next.slice(1)}`);
     }
   }
 
   // return the user to an error page with instructions
-  throw redirect(303, '/auth/auth-code-error');
+  // redirect(303, '/auth/auth-code-error');
+  error(400, 'Something went wrong validating your credentials')
 };

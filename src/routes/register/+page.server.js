@@ -13,6 +13,9 @@ export const actions = {
             password: body.password
         })
 
+        console.log(body)
+        console.log(data)
+
         if (err) {
             if (err instanceof AuthApiError && err.status === 400) {
                 return fail(400, {
