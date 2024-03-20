@@ -1,6 +1,10 @@
 // import type { Actions } from './$types'
 /** @type {import('./$types').Actions} */
 
+export const load = async ({ locals }) => {
+	const user = await locals.supabase.auth.getUser()
+	return { user: user.data.user}
+}
 
 
 export const actions = {
@@ -11,7 +15,7 @@ export const actions = {
 		const password = formData.get('password') //as string
     // ...
 	}
-}
+};
 
 // export const actions = {
 // 	default: async ({request, url, locals: {supabase}}) => {
