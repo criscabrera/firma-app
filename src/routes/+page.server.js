@@ -1,6 +1,8 @@
 // import type { Actions } from './$types'
 /** @type {import('./$types').Actions} */
 
+import { redirect } from '@sveltejs/kit';
+
 export const load = async ({ locals }) => {
 	const user = await locals.supabase.auth.getUser()
 	return { user: user.data.user}
@@ -14,7 +16,12 @@ export const actions = {
 		const email = formData.get('email') //as string
 		const password = formData.get('password') //as string
     // ...
-	}
+	},
+	//en caso de que sea un form (POST) el botón de logout
+	// logout: async ({ locals }) => {
+	// 	await locals.supabase.auth.signOut()
+	// 	redirect(303, "/")
+	// }
 };
 
 // export const actions = {

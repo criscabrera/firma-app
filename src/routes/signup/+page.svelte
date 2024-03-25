@@ -1,9 +1,5 @@
-<script>
-
-</script>
-
 <h1>Register Page 🛎️</h1>
-<form action="?/register" method="POST">
+<form action="?/signUp" method="POST">
 	<label>
 		Email
 		<input name="email" type="email" placeholder="Your email">

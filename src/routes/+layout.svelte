@@ -22,7 +22,7 @@
 </script>
 <a href="/">Home</a>
 <a href="/login">Login</a>
-<a href="/register">Register</a>
+<a href="/signup">Sign Up</a>
 <div>
     <slot></slot>
 </div>

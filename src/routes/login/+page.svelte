@@ -1,5 +1,5 @@
 <h1>Login Page ✍️</h1>
-<form method="POST">
+<form action="?/login" method="POST">
 	<label>
 		Email
 		<input name="email" type="email" placeholder="Your email">

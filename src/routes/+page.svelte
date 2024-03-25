@@ -5,6 +5,7 @@
     let { supabase } = data
     $: ({ supabase } = data)
 
+
     let photo_url = 'https://i.pravatar.cc/150?img=12';
     let name = 'Cristian Cabrera';
     let job = 'Fullstack Developer';
@@ -34,12 +35,15 @@
     }
     }
 
-console.log(data);
 </script>
 
 <h1>Firma - Team Email Signature 📬</h1>
 {#if data.session}
      <p>You are logged as {data.session.user.email}</p>
+
+     <form method="POST" action="logout">
+        <button type="submit">🫥 Logout</button>
+    </form>
 {:else}
      <p>You are not logged in!</p>
      <p><a href="/login">Log in here</a></p> 
