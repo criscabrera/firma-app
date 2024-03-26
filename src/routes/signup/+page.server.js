@@ -13,9 +13,6 @@ export const actions = {
         const {error} = await locals.supabase.auth.signUp({
             email: email,
             password: password,
-            // options: {
-            //     emailRedirectTo: `${url.origin}/auth/confirm`,
-            // }
         })
 
         if (error) {
@@ -34,6 +31,6 @@ export const actions = {
         }
 
         return {email}
-        
+
     }
 }

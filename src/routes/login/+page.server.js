@@ -10,10 +10,14 @@ export const actions = {
         const email = formData.get('email')
         const password = formData.get('password')
 
+        console.log('apunto de validar el login')
+
         const {error} = await locals.supabase.auth.signInWithPassword({
             email: email,
             password: password,
         })
+
+        console.log('validó el login')
 
         if (error) {
             if (error.status === 400) {
@@ -28,7 +32,7 @@ export const actions = {
                 values: {email}, 
             })
         }
-
+        console.log('validó el login y justo antes de redirigir')
         redirect (303, '/')
     }
 }
