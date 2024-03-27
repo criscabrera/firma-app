@@ -4,7 +4,7 @@ import { fail, redirect } from '@sveltejs/kit';
 
 
 export const actions = {
-    signUp: async ({request, locals}) => {
+    signUp: async ({request, url, locals}) => {
         const formData = await request.formData()
 
         const email = formData.get('email')
@@ -13,6 +13,8 @@ export const actions = {
         const {error} = await locals.supabase.auth.signUp({
             email: email,
             password: password,
+            options: {
+				emailRedirectTo: `${url.origin}/auth/confirm`}
         })
 
         if (error) {

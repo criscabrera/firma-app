@@ -17,8 +17,6 @@ export const actions = {
             password: password,
         })
 
-        console.log('validó el login')
-
         if (error) {
             if (error.status === 400) {
                 return fail(400, {
@@ -32,7 +30,7 @@ export const actions = {
                 values: {email}, 
             })
         }
-        console.log('validó el login y justo antes de redirigir')
-        redirect (303, '/')
+        
+        throw redirect (303, '/')
     }
 }
