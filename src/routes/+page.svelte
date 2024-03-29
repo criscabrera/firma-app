@@ -12,7 +12,7 @@
     let department = 'Engineering';
     let company = 'Firma';
     let email = 'cris@tryfirma.com';
-    let website = 'www.cris.com';
+    let website = 'www.tryfirma.com';
     let phone = '+56 9 8765 4321';
     let company_address = 'Elm St 1234, Los Angeles';
 
