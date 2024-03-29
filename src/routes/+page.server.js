@@ -1,4 +1,3 @@
-// import type { Actions } from './$types'
 /** @type {import('./$types').Actions} */
 
 import { redirect } from '@sveltejs/kit';
