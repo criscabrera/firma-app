@@ -11,10 +11,10 @@
     let job = 'Fullstack Developer';
     let department = 'Engineering';
     let company = 'Firma';
-    let email = 'cris@getfirma.com';
+    let email = 'cris@tryfirma.com';
     let website = 'www.cris.com';
-    let phone = '+56 9 7568 3856';
-    let company_address = 'San Sebastián 2965, Las Condes';
+    let phone = '+56 9 8765 4321';
+    let company_address = 'Elm St 1234, Los Angeles';
 
     // copy function 👇
     function copyTable() {
